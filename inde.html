@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruth Caceres - CV Ciberseguridad</title>
+
+    <!-- Estilos (CSS) - Aquí se define cómo se ve la página -->
+    <style>
+        /* --- RESET Y ESTILOS GENERALES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden; /* Para que las esquinas del contenedor sean redondeadas */
+        }
+
+        /* --- ENCABEZADO (HEADER) --- */
+        header {
+            background: #0a2f44; /* Azul marino, da sensación de confianza */
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap; /* Para que sea responsivo */
+            align-items: center;
+            justify-content: center;
+            gap: 30px; /* Espacio entre la foto y el texto */
+            text-align: center;
+        }
+
+        /* Ajustes para la foto (si pones una) */
+        .profile-img img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            object-fit: cover; /* Para que la imagen no se deforme */
+            background-color: #ddd; /* Fondo por si no hay foto */
+        }
+        
+        /* Si no tienes foto, este div se oculta o se ve como un círculo vacío */
+        .profile-img {
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .header-text p {
+            font-size: 1.2rem;
+            color: #aac4d4;
+            font-weight: 300;
+        }
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        .main-content {
+            padding: 40px;
+        }
+
+        /* Estilo para todas las secciones */
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #0a2f44;
+            margin-bottom: 15px;
+            border-left: 5px solid #0a2f44;
+            padding-left: 10px;
+        }
+
+        /* --- SOBRE MÍ --- */
+        .about-text {
+            font-size: 1.1rem;
+        }
+
+        /* --- EDUCACIÓN --- */
+        .edu-item {
+            margin-bottom: 10px;
+        }
+        .edu-item .institution {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .edu-item .details {
+            color: #555;
+        }
+
+        /* --- HABILIDADES --- */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+        .skills-grid li {
+            background: #e9f0f5;
+            color: #0a2f44;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #cbd8e3;
+        }
+
+        /* --- IDIOMAS --- */
+        .lang-item {
+            margin-bottom: 5px;
+        }
+        .lang-item .lang-name {
+            font-weight: bold;
+        }
+        .lang-item .lang-level {
+            color: #555;
+            font-style: italic;
+        }
+
+        /* --- PROYECTOS --- */
+        .project-item {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0a2f44;
+        }
+        .project-item h3 {
+            color: #0a2f44;
+            margin-bottom: 5px;
+        }
+        .project-item p {
+            margin-bottom: 5px;
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .project-tags span {
+            background: #d4e0e8;
+            font-size: 0.8rem;
+            padding: 2px 10px;
+            border-radius: 12px;
+            color: #1a2f44;
+        }
+
+        /* --- CONTACTO --- */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        .contact-info a {
+            color: #0a2f44;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid #0a2f44;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .contact-info a:hover {
+            background: #0a2f44;
+            color: #fff;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f4;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* --- RESPONSIVE (Para que se vea bien en celulares) --- */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 30px 15px;
+            }
+            .header-text h1 {
+                font-size: 2rem;
+            }
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ====== ENCABEZADO ====== -->
+        <header>
+            <!-- Foto: Si no tienes, puedes eliminar este div o dejar solo el círculo -->
+            <div class="profile-img">
+                <img src="ruth.jpg" alt="Foto de Ruth Caceres">
+                <!--
+                    IMPORTANTE: Para que funcione, necesitas una imagen llamada "ruth.jpg"
+                    en la misma carpeta que este archivo. Puedes usar una foto tuya o
+                    un avatar. Si no tienes, borra o comenta esta línea.
+                -->
+            </div>
+            <div class="header-text">
+                <h1>Ruth Nayle Caceres Yareta</h1>
+                <p>Estudiante de Ciberseguridad | Apasionada por la Seguridad de la Información</p>
+            </div>
+        </header>
+
+        <!-- ====== CONTENIDO ====== -->
+        <div class="main-content">
+
+            <!-- SECCIÓN: SOBRE MÍ -->
+            <section id="about">
+                <h2>Sobre Mí</h2>
+                <div class="about-text">
+                    <p>
+                        Soy una estudiante de ciberseguridad en el cuarto semestre de mi carrera.
+                        Me fascina el mundo de la protección de datos y la ética en la seguridad informática.
+                        Aunque estoy dando mis primeros pasos, tengo una gran motivación para aprender,
+                        investigar y contribuir a un entorno digital más seguro.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: EDUCACIÓN -->
+            <section id="education">
+                <h2>Educación</h2>
+                <div class="edu-item">
+                    <div class="institution">[Nombre de tu Universidad]</div>
+                    <div class="details">Carrera: [Nombre de tu Carrera, ej: Ingeniería en Ciberseguridad]</div>
+                    <div class="details">Semestre: Cuarto Semestre (Cursando)</div>
+                </div>
+                <!-- Puedes agregar más items si estudiaste antes -->
+                <div class="edu-item">
+                    <div class="institution">Cursos Complementarios</div>
+                    <div class="details">[Ej: Introducción a la Ciberseguridad - Cisco Networking Academy]</div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: HABILIDADES TÉCNICAS -->
+            <section id="skills">
+                <h2>Habilidades Técnicas</h2>
+                <ul class="skills-grid">
+                    <li>Linux / Ubuntu (Básico)</li>
+                    <li>Redes y Protocolos (TCP/IP, DNS)</li>
+                    <li>Análisis de Vulnerabilidades (Teórico)</li>
+                    <li>Wireshark (Básico)</li>
+                    <li>Python (Aprendiendo)</li>
+                    <li>Virtualización (VMware/VirtualBox)</li>
+                    <li>Ofimática (Word, Excel, PowerPoint)</li>
+                </ul>
+            </section>
+
+            <!-- SECCIÓN: IDIOMAS -->
+            <section id="languages">
+                <h2>Idiomas</h2>
+                <div class="lang-item">
+                    <span class="lang-name">Español:</span>
+                    <span class="lang-level">Nativo</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">Quechua:</span>
+                    <span class="lang-level">Intermedio / Nativo</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">Inglés:</span>
+                    <span class="lang-level">En aprendizaje (Nivel Básico - Intermedio)</span>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: PROYECTOS (¡MUY IMPORTANTE!) -->
+            <section id="projects">
+                <h2>Proyectos y Logros Académicos</h2>
+
+                <div class="project-item">
+                    <h3>Análisis de Tráfico con Wireshark</h3>
+                    <p>Realicé un análisis de tráfico en una red simulada para identificar patrones y posibles amenazas, como parte de un laboratorio de clase.</p>
+                    <div class="project-tags">
+                        <span>Wireshark</span>
+                        <span>Redes</span>
+                        <span>Análisis</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Configuración de Firewall en Entorno Virtual</h3>
+                    <p>Configuré un firewall básico en una máquina virtual Linux para controlar el acceso a servicios y practicar reglas de filtrado.</p>
+                    <div class="project-tags">
+                        <span>Linux</span>
+                        <span>Firewall</span>
+                        <span>VirtualBox</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Participación en Taller de Seguridad Ofensiva</h3>
+                    <p>Asistí a un taller introductorio de Ethical Hacking donde aprendí los fundamentos de la fase de reconocimiento y escaneo de puertos.</p>
+                    <div class="project-tags">
+                        <span>Nmap</span>
+                        <span>Reconocimiento</span>
+                        <span>Taller</span>
+                    </div>
+                </div>
+
+                <!-- Agrega más proyectos si los tienes -->
+            </section>
+
+            <!-- SECCIÓN: CONTACTO -->
+            <section id="contact">
+                <h2>Contacto</h2>
+                <div class="contact-info">
+                    <a href="mailto:ruthcaceresyareta@gmail.com">📧 Correo Electrónico</a>
+                    <!-- Agrega aquí enlaces a tus redes profesionales -->
+                    <a href="[URL de tu LinkedIn]" target="_blank">🔗 LinkedIn</a>
+                    <!-- <a href="[URL de tu GitHub]" target="_blank">🐙 GitHub</a> Si tienes -->
+                </div>
+            </section>
+
+        </div> <!-- /main-content -->
+
+        <!-- ====== PIE DE PÁGINA ====== -->
+        <footer>
+            &copy; 2026 Ruth Nayle Caceres Yareta. Todos los derechos reservados.
+        </footer>
+
+    </div> <!-- /container -->
+
+</body>
+</html>
