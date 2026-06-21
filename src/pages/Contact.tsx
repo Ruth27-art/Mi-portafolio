@@ -48,6 +48,10 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
             <i className="fab fa-github" style={{ fontSize: '1.5rem', color: '#fff' }}></i>
             <span>Perfil de GitHub</span>
           </a>
+          <a href="https://wa.me/51945732854?text=Hola%20Ruth,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." target="_blank" rel="noopener noreferrer" className="contact-item">
+            <i className="fab fa-whatsapp" style={{ fontSize: '1.5rem', color: '#25D366' }}></i>
+            <span>Enviar WhatsApp</span>
+          </a>
           <form style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }} onSubmit={handleSubmit}>
             <input type="text" placeholder="Tu Nombre" required style={{ padding: '12px', borderRadius: '8px', border: '1px solid var(--border)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
             <textarea placeholder="Mensaje..." rows={3} required style={{ padding: '12px', borderRadius: '8px', border: '1px solid var(--border)', background: 'rgba(0,0,0,0.2)', color: 'white', resize: 'vertical' }}></textarea>
